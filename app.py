@@ -47,12 +47,19 @@ def getRecipe():
 @app.route('/view', methods=['GET', 'POST'])
 def view():
     out = None
+    finalOutput = ''
     print(request.method)
     if request.method == 'POST' :
         recipeName = request.form.get('name')
         v = View()
         out = v.fetch(recipeName)
-        print(out)
+        # print(out)
+        time = out[0]
+        ing = out[1]
+        ins = out[2]
+        notes = out[3]
+        finalOutput = f'Recipe: {recipeName}\n Time: {time}\n Ingredients: {ing}\nInstructions: {ins}\nNotes: {notes}'
+        out = finalOutput
         return render_template('view.html', output = out)
 
     return render_template('view.html', output = out)
