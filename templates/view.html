@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <input type="text" name="name" id="name" placeholder="Recipe Name" required/>
+        <button type="submit">View Recipe</button>
+    </form>
+    {% if output %}
+    <div class="output">{{output}}</div>
+    {% endif %} 
+</body>
+</html>
