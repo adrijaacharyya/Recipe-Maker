@@ -3,42 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Recipes</title>
 </head>
 <body>
-    <form method="post">
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input type="text" name="name" id="name" placeholder="Recipe Name" required/>
-        <label id="icon" for="time"><i class="icon-user"></i></label>
-        <input type="text" name="time" id="time" placeholder="Preparation Time"/>
-        <!-- <form action="/">
-            <label for="type">Choose the type of recipe:</label>
-            <br>
-            <select name="type" id="type">
-                <option value="select" selected>Select</option>
-                <option value="breakfast">Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-            </select>
-            <br>
-        </form> -->
-        
-        <!-- <div>
-            <form>
-                <label id="icon" for="ingredient-name"><i class="icon-user"></i></label>
-                <input type="text" name="ingredient-name" id="ingredient-name" placeholder="Ingredient Name" required/>
-                <label id="icon" for="quantity"><i class="icon-user"></i></label>
-                <input type="text" name="quantity" id="quantity" placeholder="Quantity" required/>
-                <button class="btn add">Add Ingredient</button>
-                <button class="btn remove">Remove Ingredient</button>
-            </form>
-        </div> -->
-        <textarea type="text" name="ingredient" id="ingredient" placeholder="Ingredient" required></textarea>
-        
-        <textarea type="text" name="instruction" id="instruction" placeholder="Instruction" required></textarea>
-        <textarea type="text" name="notes" id="notes" placeholder="Notes" required></textarea>
-        <button type='submit' class="btn">Create</button>
-
-    </form>
-</body>
+    <div class="login-box center">
+        <h2>Create Recipes</h2>
+        <form method="post" >
+            <div class="user-box">
+                <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="name" id="name" placeholder="Recipe Name" required/>
+            <label id="icon" for="time"><i class="icon-user"></i></label>
+            <input type="text" name="time" id="time" placeholder="Preparation Time"/>
+            <!-- <form action="/">
+                <label for="type">Choose the type of recipe:</label>
+                <br>
+                <select name="type" id="type">
+                    <option value="select" selected>Select</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                <br>
+            </form> -->
+            
+            <!-- <div>
+                <form>
+                    <label id="icon" for="ingredient-name"><i class="icon-user"></i></label>
+                    <input type="text" name="ingredient-name" id="ingredient-name" placeholder="Ingredient Name" required/>
+                    <label id="icon" for="quantity"><i class="icon-user"></i></label>
+                    <input type="text" name="quantity" id="quantity" placeholder="Quantity" required/>
+                    <button class="btn add">Add Ingredient</button>
+                    <button class="btn remove">Remove Ingredient</button>
+                </form>
+            </div> -->
+            <textarea type="text" name="ingredient" id="ingredient" placeholder="Ingredient" required></textarea>
+            
+            <textarea type="text" name="instruction" id="instruction" placeholder="Instruction" required></textarea>
+            <textarea type="text" name="notes" id="notes" placeholder="Notes" required></textarea><br><br>
+            <button type='submit' class="btn">Create</button>
+    
+            </div>
+        </form>
+    </body>
+    </div>
+    
 </html>

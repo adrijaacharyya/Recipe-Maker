@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <title>Recipes</title>
 </head>
-<body>
-    <a href="create"><button type="submit">Create Recipes</button></a>
-    <a href="view"><button type="submit">View Recipes</button></a>
+<body class="homepage">
+    <div class="card center">
+        <a href="create"><button class="btn" type="submit">Create Recipes</button></a>
+        <a href="view"><button class="btn" type="submit">View Recipes</button></a>
+    </div>
+    
 </body>
 </html>
