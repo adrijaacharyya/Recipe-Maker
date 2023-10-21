@@ -33,13 +33,36 @@ To set up and run the Recipe Maker Web App locally or deploy it to a web server,
    pip install Flask
    pip install mysql-connector-python
    ```
+   
+4. **SetUp MySQL:**
+   ```
+   https://www.mysql.com/downloads/
+   mysql -u root -p
 
-4. **Start the Development Server:**
+   ```
+   
+5. **Create the database:**
+   ```
+   CREATE DATABASE Recipe;
+   Use the database: USE Recipe;
+   Create the recipes table:
+               CREATE TABLE recipes (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(255),
+                time VARCHAR(255),
+                ingredient VARCHAR(255),
+                instructions MEDIUMTEXT,
+                notes VARCHAR(255)
+               );
+   
+   ```
+
+5. **Start the Development Server:**
    ```
    flask run
    ```
 
-5. **Open the Application:**
+6. **Open the Application:**
    - Open a web browser and go to http://localhost:5000 to access the Recipe Maker Web App.
 
 ## Step-by-step Launch Instructions
