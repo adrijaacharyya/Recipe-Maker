@@ -9,17 +9,6 @@ app = Flask(__name__)
 # app.config['MYSQL_DB'] = 'recipe'
 
 
-# @app.route('/', methods=['GET', 'POST'])
-# def login():
-#     error = None
-#     try:
-#         if request.method == 'POST':
-#             cn, pw = getUser()
-#             if (ldapmodel.verifyLogin(cn, pw)):
-#                 return render_template('registration.html')
-#     except Exception as err:
-#         error = str(err)
-#     return render_template('login.html', error = error)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
